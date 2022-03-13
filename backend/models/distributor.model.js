@@ -6,12 +6,13 @@ const Distributor = function(distributor) {
     this.nama_distributor = distributor.nama_distributor;
     this.alamat = distributor.alamat;
     this.id_kota = distributor.id_kota
+    this.nama_kota = distributor.nama_kota
 };
 
 //--------------------------------------------------------------------------------------
 //model menampilkan semua data di tabel
 Distributor.getAllDistributor = result => {
-    sql.query("SELECT * FROM distributor", (err, res) => {
+    sql.query("SELECT id_distributor, nama_distributor, alamat, distributor.id_kota, kota.nama_kota FROM distributor, kota WHERE distributor.id_kota = kota.id_kota; ", (err, res) => {
       if (err) {
         console.log("error: ", err);
         result(null, err);
@@ -26,7 +27,7 @@ Distributor.getAllDistributor = result => {
 //--------------------------------------------------------------------------------------
 //model menampilkan data per id
 Distributor.findDistributorById = (id_distributor, result) => {
-  sql.query(`SELECT * FROM distributor WHERE id_distributor = ${id_distributor}`, (err, res) => {
+  sql.query(`SELECT id_distributor, nama_distributor, alamat, distributor.id_kota, kota.nama_kota FROM distributor, kota WHERE distributor.id_kota = kota.id_kota and id_distributor = ${id_distributor}`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);

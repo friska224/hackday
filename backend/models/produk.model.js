@@ -12,7 +12,7 @@ const Produk = function(produk) {
 //--------------------------------------------------------------------------------------
 //model menampilkan semua data di tabel
 Produk.getAllProduk = result => {
-    sql.query("SELECT * FROM produk", (err, res) => {
+    sql.query("SELECT id_produk, nama_produk, harga, produk.id_kategori, kategori.nama_kategori, produk.id_distributor, distributor.nama_distributor FROM produk,kategori,distributor WHERE produk.id_kategori= kategori.id_kategori and produk.id_distributor= distributor.id_distributor", (err, res) => {
       if (err) {
         console.log("error: ", err);
         result(null, err);
@@ -27,7 +27,7 @@ Produk.getAllProduk = result => {
 //--------------------------------------------------------------------------------------
 //model menampilkan data per id
 Produk.findProdukById = (id_produk, result) => {
-  sql.query(`SELECT * FROM produk WHERE id_produk = ${id_produk}`, (err, res) => {
+  sql.query(`SELECT id_produk, nama_produk, harga, produk.id_kategori, kategori.nama_kategori, produk.id_distributor, distributor.nama_distributor FROM produk,kategori,distributor WHERE produk.id_kategori= kategori.id_kategori and produk.id_distributor= distributor.id_distributor and id_produk = ${id_produk}`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
