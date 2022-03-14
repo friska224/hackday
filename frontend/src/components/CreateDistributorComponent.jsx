@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import DistributorService from '../services/DistributorService';
 import KotaService from '../services/KotaService';
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
 
 class CreateDistributorComponent extends Component {
     constructor(props) {
@@ -88,6 +90,7 @@ class CreateDistributorComponent extends Component {
     render() {
         return (
             <div>
+                <HeaderComponent />
                 <br></br>
                    <div className = "container">
                         <div className = "row">
@@ -125,6 +128,7 @@ class CreateDistributorComponent extends Component {
                         </div>
 
                    </div>
+                   <FooterComponent />
             </div>
         )
     }

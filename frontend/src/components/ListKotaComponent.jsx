@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react'
 import KotaService from '../services/KotaService'
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
 
 class ListKotaComponent extends Component {
     constructor(props) {
@@ -39,6 +41,7 @@ class ListKotaComponent extends Component {
     render() {
         return (
             <div>
+                <HeaderComponent />
                  <h2 className="text-center">List KOTA</h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addKota}> Tambah Kota</button>
@@ -72,7 +75,7 @@ class ListKotaComponent extends Component {
                         </table>
 
                  </div>
-
+                 <FooterComponent />
             </div>
         )
     }

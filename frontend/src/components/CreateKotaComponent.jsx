@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import KotaService from '../services/KotaService';
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
 
 class CreateKotaComponent extends Component {
     constructor(props) {
@@ -70,6 +72,7 @@ class CreateKotaComponent extends Component {
     render() {
         return (
             <div>
+                <HeaderComponent />
                 <br></br>
                    <div className = "container">
                         <div className = "row">
@@ -92,6 +95,7 @@ class CreateKotaComponent extends Component {
                         </div>
 
                    </div>
+                   <FooterComponent />
             </div>
         )
     }

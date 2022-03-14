@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
+import HeaderComponent from './components/HeaderComponent';
+import FooterComponent from './components/FooterComponent';
 
 
-const Home = () => {return(
+const Home = () => {
+    
+    
+    
+    return(
+    <div>
+<HeaderComponent />
     <ul>
         
         <li>
@@ -18,6 +26,8 @@ const Home = () => {return(
             <Link to={`/produk`}>Produk</Link>
         </li>
     </ul>
+    <FooterComponent />
+    </div>
 );
 }
 

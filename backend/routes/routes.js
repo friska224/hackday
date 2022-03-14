@@ -37,4 +37,7 @@ module.exports = app => {
     app.delete("/distributor/:id_distributor", distributor.delete); //hapus per id
     app.delete("/distributor", distributor.deleteAll); //hapus semua data
 
+
+
+    
   };

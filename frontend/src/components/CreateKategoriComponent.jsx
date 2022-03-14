@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import KategoriService from '../services/KategoriService';
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
 
 class CreateKategoriComponent extends Component {
     constructor(props) {
@@ -70,6 +72,7 @@ class CreateKategoriComponent extends Component {
     render() {
         return (
             <div>
+                <HeaderComponent />
                 <br></br>
                    <div className = "container">
                         <div className = "row">
@@ -92,6 +95,7 @@ class CreateKategoriComponent extends Component {
                         </div>
 
                    </div>
+                   <FooterComponent />
             </div>
         )
     }

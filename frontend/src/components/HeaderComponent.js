@@ -22,6 +22,7 @@ class HeaderComponent extends Component {
                     <div className="navbar" className="px-2"><Link to={`/kategori`} class="text-warning">Kategori</Link></div>
                     <div className="navbar" className="px-2"><Link to={`/distributor`} class="text-warning">Distributor</Link></div>
                     <div className="navbar" className="px-2"><Link to={`/produk`} class="text-warning">Produk</Link></div>
+                    <div className="navbar" className="px-2"><Link to={`../logout`} class="text-warning">Logout</Link></div>
                     </nav>
                 </header>
             </div>

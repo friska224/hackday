@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react'
 import DistributorService from '../services/DistributorService'
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './FooterComponent';
 
 class ListDistributorComponent extends Component {
     constructor(props) {
@@ -39,6 +41,7 @@ class ListDistributorComponent extends Component {
     render() {
         return (
             <div>
+                <HeaderComponent />
                  <h2 className="text-center">List Distributor</h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addDistributor}> Tambah Distributor</button>
@@ -76,7 +79,7 @@ class ListDistributorComponent extends Component {
                         </table>
 
                  </div>
-
+                 <FooterComponent />
             </div>
         )
     }
